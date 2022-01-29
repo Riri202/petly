@@ -34,7 +34,7 @@ const fetchPets = async () => {
         return (
         <>
        {loading ? <h1>Loading page</h1> : <><h2>Search results</h2><Container className='card-wrapper'>
-       <Grid container> {pet && pet.map((animal, key) => {
+       <Grid container spacing={5}> {pet && pet.map((animal, key) => {
                         const { images, name, breed, city, state } = animal;
                         return ( 
                             <Grid item xs={12} sm={6} md={4}>

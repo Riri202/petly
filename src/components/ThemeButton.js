@@ -6,7 +6,7 @@ import { IoIosMoon } from 'react-icons/io';
 
 function ThemeButton() {
   return <div>
-    <ButtonGroup variant="outlined" aria-label="outlined button group" style={{marginTop: 15}}>
+    <ButtonGroup variant="outlined" aria-label="outlined button group" style={{marginTop: 15}} >
         <Button>  
             <FiSun/>
          </Button>

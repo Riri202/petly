@@ -13,8 +13,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 const useStyles = makeStyles({
   root: {
-      backgroundColor: '#fff',
-      height: 70,
+      height: 90,
       
       
   },
@@ -35,10 +34,10 @@ function NavBar() {
 
   return <Box className={classes.root} >
    
-  <AppBar position="fixed" style={{padding: 12}} >
+  <AppBar color="secondary" position="fixed" style={{padding: 12}} >
   <Toolbar>
-    <Box  sx={{display: 'flex', flexDirection: 'row', flexGrow: 1}}>
-      <Box sx={{display: 'flex', flexDirection: 'row'}}>
+    <Box  sx={{display: 'flex', flexDirection: 'row'}}>
+      <Box sx={{display: 'flex', flexDirection: 'row', flexGrow: 1}}>
           <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
             <img src={Logo}/>
           </Box>

@@ -6,6 +6,9 @@ import {createTheme, ThemeProvider} from '@material-ui/core'
 const theme = createTheme ({
         palette: {
           primary: {
+            main: '#0D75ff'
+          },
+          secondary: {
             main: '#fff'
           }
         }
