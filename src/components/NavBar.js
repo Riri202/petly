@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core'
 import ThemeButton from './ThemeButton';
 import Logo from '../assets/Logo.png'
-import Toolbar from '@material-ui/core/Toolbar';
+//import Toolbar from '@material-ui/core/Toolbar';
 
 
 
@@ -36,21 +36,22 @@ function NavBar() {
   return <Box className={classes.root} >
    
   <AppBar position="fixed" style={{padding: 12}} >
-  <Toolbar>
-    <Box  sx={{display: 'flex', flexDirection: 'row', flexGrow: 1}}>
-      <Box sx={{display: 'flex', flexDirection: 'row'}}>
+
+    <Box  sx={{display: 'flex', flexDirection: 'row'}}>
+      <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}} >
           <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
             <img src={Logo}/>
           </Box>
-        
+          
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{marginTop: 12, marginLeft: 8}}>
             Petly
           </Typography>
+         
       </Box>
-
-      <ThemeButton/>
+      <Box sx={{ flexGrow: 1 }} />
+      <ThemeButton style={{paddingRight: 70}}/>
     </Box> 
-    </Toolbar>
+    
   </AppBar>
   
 </Box>
