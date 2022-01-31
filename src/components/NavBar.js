@@ -34,7 +34,7 @@ function NavBar() {
 
   return <Box className={classes.root} >
    
- ft-display-homepage-hero-section
+ 
   <AppBar color="secondary" position="fixed" style={{padding: 12}} >
   <Toolbar>
     <Box  sx={{display: 'flex', flexDirection: 'row'}}>
@@ -42,7 +42,7 @@ function NavBar() {
   <AppBar position="fixed" style={{padding: 12}} >
 
     <Box  sx={{display: 'flex', flexDirection: 'row'}}>
-      <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}}  main
+      <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}}
           <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
             <img src={Logo}/>
           </Box>
