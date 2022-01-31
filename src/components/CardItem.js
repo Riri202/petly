@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     },
     root:{
         maxWidth:355,
-        spacing: 20
+        
        
     },
     media: {

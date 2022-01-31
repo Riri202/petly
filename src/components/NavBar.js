@@ -13,8 +13,7 @@ import Logo from '../assets/Logo.png'
 
 const useStyles = makeStyles({
   root: {
-      backgroundColor: '#fff',
-      height: 70,
+      height: 90,
       
       
   },
@@ -35,10 +34,15 @@ function NavBar() {
 
   return <Box className={classes.root} >
    
+ ft-display-homepage-hero-section
+  <AppBar color="secondary" position="fixed" style={{padding: 12}} >
+  <Toolbar>
+    <Box  sx={{display: 'flex', flexDirection: 'row'}}>
+      <Box sx={{display: 'flex', flexDirection: 'row', flexGrow: 1}}>
   <AppBar position="fixed" style={{padding: 12}} >
 
     <Box  sx={{display: 'flex', flexDirection: 'row'}}>
-      <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}} >
+      <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}}  main
           <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
             <img src={Logo}/>
           </Box>
