@@ -4,16 +4,22 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { FiSun } from 'react-icons/fi';
 import { IoIosMoon } from 'react-icons/io';
 
+
 function ThemeButton() {
   return <div>
+ ft-display-homepage-hero-section
     <ButtonGroup variant="outlined" aria-label="outlined button group" style={{marginTop: 15}} >
         <Button>  
+    <ButtonGroup variant="outlined" aria-label="outlined button group" style={{ paddingRight: 135, height: 30}}>
+       
+        <Button style={{padding:20}}>  
+main
             <FiSun/>
          </Button>
-        <Button>
+        <Button style={{padding:20}}>
             <IoIosMoon/>
         </Button>
-        
+     
     </ButtonGroup>
   </div>;
 }
