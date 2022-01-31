@@ -86,10 +86,10 @@ function HeroSearch() {
     <Typography>
               You may be looking for
     </Typography>
-    <Button variant="text" endIcon={<ImCancelCircle/>}>
+    <Button color='primary' variant="text" endIcon={<ImCancelCircle/>}>
         Dogs
     </Button>
-    <Button variant="text" endIcon={<ImCancelCircle/>}>
+    <Button color='primary' variant="text" endIcon={<ImCancelCircle/>}>
         Cats
     </Button>
   </div>;
