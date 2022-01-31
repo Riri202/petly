@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/alt-text */
+
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core'
@@ -64,19 +64,19 @@ const classes = useStyles()
 
                 <div className={classes.imgCon1}>
                     <div>
-                        <img src={Cat}/>
+                        <img alt='cat' src={Cat}/>
                     </div>
                     <div>
-                        <img src={Dog1}/>
+                        <img  alt='dog'src={Dog1}/>
                     </div>
                 </div>
                 <div className={classes.imgCon2}>
                 
                     <div>
-                        <img src={Dog2}/>
+                        <img alt='dog2' src={Dog2}/>
                     </div>
                     <div>
-                        <img src={Bird}/>
+                        <img alt='bird' src={Bird}/>
                     </div>
                     
                 </div>

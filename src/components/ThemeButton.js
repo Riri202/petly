@@ -8,9 +8,10 @@ import { IoIosMoon } from 'react-icons/io';
 function ThemeButton() {
   return <div>
  
-    <ButtonGroup variant="outlined" aria-label="outlined button group" style={{marginTop: 15}} >
-        <Button>  
-    <ButtonGroup variant="outlined" aria-label="outlined button group" style={{ paddingRight: 135, height: 30}}>
+
+    <ButtonGroup variant="outlined" aria-label="outlined button group" style={{marginTop:8, paddingRight: 50, height: 30}} >
+   
+
        
         <Button style={{padding:20}}>  
 
@@ -21,7 +22,7 @@ function ThemeButton() {
         </Button>
      
     </ButtonGroup>
-  </div>;
+  </div>
 }
 
 export default ThemeButton;
