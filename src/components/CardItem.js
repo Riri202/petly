@@ -1,11 +1,11 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/prop-types */
+
 import React from 'react';
 // import './CardItem.css'
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core'
-import { hover } from '@testing-library/user-event/dist/hover';
-import Grid from '@material-ui/core/Grid'
+// import { hover } from '@testing-library/user-event/dist/hover';
+// import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
