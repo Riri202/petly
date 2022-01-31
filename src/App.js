@@ -1,22 +1,22 @@
-
+import React from 'react'
 import './App.css';
 import HomePage from './pages/HomePage'
 import {createTheme, ThemeProvider} from '@material-ui/core'
 
-const theme = createTheme ({
+const Theme = createTheme ({
         palette: {
           primary: {
             main: '#0D75ff'
           },
           secondary: {
-            main: '#fff'
+            main: '#fff',
           }
         }
 })
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
     <div className="App">
         <HomePage/>
       
