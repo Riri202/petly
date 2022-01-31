@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import React, { useState, useEffect} from 'react';
@@ -87,41 +88,43 @@ const handleReptile = () =>{
 
   return  <div className={classes.container}>
   <Typography variant='h4'>Browse Through Pet Types</Typography>
-<Button onClick={handleDog} className={classes.root} color='primary' variant='outlined' size='large'>
-<Box sx={{ flexDirection: 'column'}}> 
-    <img alt= 'Dog' src={Dog}/>
-    <Typography>Dog</Typography>
+  <Box sx={{mb: 8}}>
+        <Button onClick={handleDog} className={classes.root} color='primary' variant={presentTab === 'dog' ? 'outlined' : 'text'} size='large'>
+        <Box sx={{ flexDirection: 'column'}}> 
+            <img alt= 'Dog' src={Dog}/>
+            <Typography>Dog</Typography>
+        </Box>
+        </Button>
+        <Button onClick={handleCat}  className={classes.root} color='primary' variant={presentTab === 'cat' ? 'outlined' : 'text'}  size='large'>
+        <Box sx={{ flexDirection: 'column'}}> 
+            <img alt='Cat' src={Cat}/>
+            <Typography>Cat</Typography>
+        </Box>
+        </Button>
+        <Button onClick={handleBird}  className={classes.root} color='primary' variant={presentTab === 'bird' ? 'outlined' : 'text'}  size='large'>
+        <Box sx={{ flexDirection: 'column'}}> 
+            <img alt='Bird' src={Bird}/>
+            <Typography>Bird</Typography>
+        </Box>
+        </Button>
+        <Button onClick={handleRabbit}  className={classes.root} color='primary' variant={presentTab === 'rabbit' ? 'outlined' : 'text'}  size='large'>
+        <Box sx={{ flexDirection: 'column'}}> 
+            <img alt='Rabbit' src={Rabbit}/>
+            <Typography>Rabbit</Typography>
+        </Box>
+        </Button>
+        <Button onClick={handleReptile}  className={classes.root} color='primary' variant={presentTab === 'reptile' ? 'outlined' : 'text'}  size='large'>
+        <Box sx={{ flexDirection: 'column'}}> 
+            <img alt='Reptile' src={Reptile}/>
+            <Typography>Reptile</Typography>
+        </Box>
+        </Button>
 </Box>
-</Button>
-<Button onClick={handleCat}  className={classes.root} color='primary' variant='text' size='large'>
-<Box sx={{ flexDirection: 'column'}}> 
-    <img alt='Cat' src={Cat}/>
-    <Typography>Cat</Typography>
-</Box>
-</Button>
-<Button onClick={handleBird}  className={classes.root} color='primary' variant='text' size='large'>
-<Box sx={{ flexDirection: 'column'}}> 
-    <img alt='Bird' src={Bird}/>
-    <Typography>Bird</Typography>
-</Box>
-</Button>
-<Button onClick={handleRabbit}  className={classes.root} color='primary' variant='text' size='large'>
-<Box sx={{ flexDirection: 'column'}}> 
-    <img alt='Rabbit' src={Rabbit}/>
-    <Typography>Rabbit</Typography>
-</Box>
-</Button>
-<Button onClick={handleReptile}  className={classes.root} color='primary' variant='text' size='large'>
-<Box sx={{ flexDirection: 'column'}}> 
-    <img alt='Reptile' src={Reptile}/>
-    <Typography>Reptile</Typography>
-</Box>
-</Button>
-
-{/* <h3>{presentTabs}s</h3> */}
+ <Box sx={{mb: 3}}><Typography variant = 'h4' >{presentAnimal}s</Typography> </Box>
 <Grid container spacing={5}> {filteredAnimal && filteredAnimal.map((animal, key) => {
                     const { images, name, breed, city, state } = animal;
                     return ( 
+                        
                         <Grid item xs={12} sm={6} md={4}>
                            <CardItem key={key}
                         src={images[0]}
