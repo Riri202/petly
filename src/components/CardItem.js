@@ -75,7 +75,7 @@ const classes = useStyles()
                                 
                      </Box >
                         </CardContent>
-            </Card>
+                </Card>
 
            
     
