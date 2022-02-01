@@ -48,7 +48,7 @@ function NavBar() {
     <Box  sx={{display: 'flex', flexDirection: 'row'}}>
       <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}}>
           <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-            <img src={Logo}/>
+            <img alt='petly-logo' src={Logo}/>
           </Box>
                       
                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{marginTop: 12, marginLeft: 8}}>
