@@ -26,7 +26,8 @@ const useStyles = makeStyles({
     },
     container: {
         paddingTop: 80,
-        paddingLeft: 55
+        paddingLeft: 55,
+        marginBottom: 60,
     }
 })
 
