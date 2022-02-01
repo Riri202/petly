@@ -1,11 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unreachable */
-/* eslint-disable no-undef */
+/* eslint-disable react/jsx-key */
 // import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import CardItem from './CardItem';
-import {Container } from '@material-ui/core';
+import {Container, Typography } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid'
+
 // import './Cards.css'
 
 function Cards() {
@@ -33,7 +32,7 @@ const fetchPets = async () => {
 
         return (
         <>
-       {loading ? <h1>Loading page</h1> : <><h2>Search results</h2><Container className='card-wrapper'>
+       {loading ? <h1>Loading page</h1> : <><Typography variant='h5' style={{ color:'#344062', marginTop: 70, marginLeft: 90, marginBottom: 30 }}>Search results</Typography><Container className='card-wrapper'>
        <Grid container spacing={5}> {pet && pet.map((animal, key) => {
                         const { images, name, breed, city, state } = animal;
                         return ( 

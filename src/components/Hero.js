@@ -9,19 +9,28 @@ import Dog2 from '../assets/Rectangle-504.png'
 import Bird from '../assets/Rectangle-505.png'
 
 
+
 const useStyles = makeStyles({
     root: {
         backgroundColor: '  rgba(13, 117, 255, 0.05)',
-        height: '90vh',
+        height: '110vh',
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
         flexBasis: '33.33333%'
 
     },
+    heroText: {
+        paddingTop: 100,
+        paddingLeft: 50,
+        paddingBottom: 100
+    },
     imgContainer: {
         display: 'flex',
         flexDirection: 'column',
+        paddingTop: 70,
+        paddingLeft: 80
+        
         
     },
     imgCon1: {
@@ -40,18 +49,18 @@ const classes = useStyles()
   return <div className={classes.root}>
 <div>
   
-        <div>
-            <Typography>
+        <div className={classes.heroText}>
+            <Typography style={{color: '#0D75FF', fontSize: 14}} >
                 FIND SPECIAL PETS
             </Typography>
-            <Typography>
+            <Typography variant='h3' style={{color: '#344062'}}>
                 Think you Love Pets?
             </Typography>
-            <Typography>
+            <Typography variant='h3' style={{color: '#D21A30'}}>
                 Adopt One
             </Typography>
-            <Typography>
-                Pet Adoption is quickly becoming the preferred way to find a new dog, puppy or kitten.
+            <Typography style={{fontWeight: 'light'}}>
+                Pet Adoption is quickly becoming the preferred way to find a new dog, puppy, cat <br></br> or kitten.
             </Typography>
         </div>
 

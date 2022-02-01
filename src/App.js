@@ -3,7 +3,7 @@ import './App.css';
 import HomePage from './pages/HomePage'
 import {createTheme, ThemeProvider} from '@material-ui/core'
 
-const Theme = createTheme ({
+const theme = createTheme ({
         palette: {
           primary: {
             main: '#0D75ff'
@@ -11,12 +11,23 @@ const Theme = createTheme ({
           secondary: {
             main: '#fff',
           }
-        }
+        },
+        typography: {
+           "fontFamily": [
+            '"Inter", sans-serif'
+           ].join(''),
+           "fontWeightLight": 400,
+           "fontWeightRegular": 500,
+           "fontWeightBold": 600,
+           allVariants: {
+             color: ' #666879'
+           }
+        },
 })
 
 function App() {
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={theme}>
     <div className="App">
         <HomePage/>
       

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import React from 'react';
-// import './CardItem.css'
+
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core'
 // import { hover } from '@testing-library/user-event/dist/hover';
@@ -68,6 +68,7 @@ const classes = useStyles()
                     <Box  sx={{ display: 'flex' }} className={classes.cardInfo} >
                         <Button 
                         className={classes.btn}
+                        color='primary'
                         variant="contained">View Details</Button>
                         <Typography>
                             {city}, {state}

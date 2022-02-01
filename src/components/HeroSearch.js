@@ -23,9 +23,9 @@ const useStyles = makeStyles({
         width: 200,
         height: 50,
         borderRadius:50,
-        padding:10,
+        padding:5,
         color: 'white',
-        marginTop: -15
+        marginTop: -8
         
         },
        
@@ -33,11 +33,12 @@ const useStyles = makeStyles({
 
 function HeroSearch() {
     const classes = useStyles();
-  return <div style={{width: '60vw', height: 200, backgroundColor: '#fff', padding: 30, }}> 
-<Box sx={{display: 'flex', flexDirection: 'row' }}>
+  return <div style={{width: '50vw', height: 150, backgroundColor: '#fff', padding: 30, marginLeft: 50}}> 
+<Box sx={{padding: 2, borderRadius:50, display: 'flex', flexDirection: 'row', backgroundColor: '  rgba(13, 117, 255, 0.05)'}}>
     <FormControl fullWidth>
-    <InputLabel id="location-label"> <GoLocation/> All Locations</InputLabel>
+    <InputLabel style={{marginLeft: 25}} id="location-label"> <GoLocation style={{marginRight: 7}} /> All Locations</InputLabel>
     <Select
+        disableUnderline
         labelId="location-label"
         id="location-select"
         // value={age}
@@ -51,8 +52,9 @@ function HeroSearch() {
     </Select>
     </FormControl>
     <FormControl fullWidth>
-    <InputLabel id="animal-label">  <FaDog/>Animal</InputLabel>
+    <InputLabel style={{marginLeft: 25}} id="animal-label">  <FaDog style={{marginRight: 7}} />Animal</InputLabel>
     <Select
+        disableUnderline
         labelId="animal-label"
         id="animal-select"
         // value={age}
@@ -65,8 +67,9 @@ function HeroSearch() {
     </Select>
     </FormControl>
     <FormControl fullWidth>
-    <InputLabel id="breed-label"> <GiScales/> Breed</InputLabel>
+    <InputLabel style={{marginLeft: 25}} id="breed-label"> <GiScales style={{marginRight: 7}}/> All Breeds</InputLabel>
     <Select
+        disableUnderline
         labelId="breed-label"
         id="breed-select"
         // value={age}
@@ -79,17 +82,17 @@ function HeroSearch() {
     </Select>
     </FormControl>
     <Box className={classes.searchIcon} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-            <FaSearch/>
+            <FaSearch size={25}/>
           </Box>
           
     </Box>
-    <Typography>
+    <Typography style={{margin: 15}}>
               You may be looking for
     </Typography>
-    <Button variant="text" endIcon={<ImCancelCircle/>}>
+    <Button style={{backgroundColor: '  rgba(13, 117, 255, 0.05)', marginRight: 10}} color='primary' variant="text" endIcon={<ImCancelCircle/>}>
         Dogs
     </Button>
-    <Button variant="text" endIcon={<ImCancelCircle/>}>
+    <Button style={{backgroundColor: '  rgba(13, 117, 255, 0.05)'}} color='primary'  variant="text" endIcon={<ImCancelCircle/>}>
         Cats
     </Button>
   </div>;

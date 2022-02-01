@@ -60,7 +60,7 @@ function Footer() {
                         <Typography>
                             <span>Need</span> help with adopting a pet?
                         </Typography>
-                        <Button className={classes.btn} variant="contained">
+                        <Button color='primary' className={classes.btn} variant="contained">
                             View all Pets
                         </Button>
                     </Box>
@@ -81,7 +81,7 @@ function Footer() {
                     </Box>
                     <Box sx={{display:'flex', flexDirection:'column', ml:40}}>
                         <Box sx={{display: 'flex', justifyContent: 'space-evenly', mb: 3}}>
-                            <FaFacebook size={20}/> <FaInstagram size={20}/> <FaTwitter size={20}/> <FaLinkedin size={20}/>
+                            <FaFacebook size={20} style={{color: '#666879'}}/> <FaInstagram size={20} style={{color: '#666879'}}/> <FaTwitter size={20} style={{color: '#666879'}}/> <FaLinkedin size={20} style={{color: '#666879'}}/>
                         </Box>
                         <Typography>
                             Copyright © 2021 Petly. All rights reserved.

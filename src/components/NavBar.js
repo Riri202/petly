@@ -40,7 +40,7 @@ function NavBar() {
    
  
 
-  <AppBar color="secondary" position="fixed" style={{padding: 12}} >
+  <AppBar elevation={0} color="secondary" position="fixed" style={{padding: 12}} >
 
     
   
