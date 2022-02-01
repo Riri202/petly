@@ -39,31 +39,29 @@ function NavBar() {
   return <Box className={classes.root}>
    
  
-        <AppBar color = '#fff'  position="fixed" style={{padding: 12}}>
-          
-          <Box>
-              <Box >
-              
 
-                <Box  sx={{display: 'flex', flexDirection: 'row'}}>
-                  <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}}>
-                      <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-                        <img alt='petly-logo' src={Logo}/>
-                      </Box>
+  <AppBar color="secondary" position="fixed" style={{padding: 12}} >
+
+    
+  
+
+    <Box  sx={{display: 'flex', flexDirection: 'row'}}>
+      <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}}>
+          <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+            <img src={Logo}/>
+          </Box>
                       
-                      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{marginTop: 12, marginLeft: 8}}>
+                   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{marginTop: 12, marginLeft: 8}}>
                         Petly
                       </Typography>
                       
-                  </Box>
+          </Box>
                   <Box sx={{ flexGrow: 1 }} />
                   <ThemeButton style={{paddingRight: 10}}/>
                 </Box> 
           
             
-            </Box>  
-        </Box> 
-         
+           
         </AppBar>
 </Box>
 };
