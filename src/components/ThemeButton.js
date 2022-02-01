@@ -9,7 +9,8 @@ function ThemeButton() {
   return <div>
  
 
-    <ButtonGroup variant="outlined" aria-label="outlined button group" style={{marginTop:8, paddingRight: 50, height: 30}} >
+    <ButtonGroup color = 'primary' variant="outlined" aria-label="outlined button group" style={{marginTop:8, paddingRight: 50, height: 30}} >
+
    
 
        
