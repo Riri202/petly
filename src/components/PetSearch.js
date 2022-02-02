@@ -122,8 +122,8 @@ const handleReptile = () =>{
         </Button>
 </Box>
  <Box sx={{mb: 3}}><Typography variant = 'h4' >{presentAnimal}s</Typography> </Box>
-<Grid container spacing={5}> {filteredAnimal && filteredAnimal.map((animal, key) => {
-                    const { images, name, breed, city, state } = animal;
+<Grid container spacing={5}> {filteredAnimal && filteredAnimal.map((animals, key) => {
+                    const { animal,images, name, breed, city, state } = animals;
                     return ( 
                         
                         <Grid item xs={12} sm={6} md={4}>
@@ -132,7 +132,8 @@ const handleReptile = () =>{
                         text={name}
                         breed={breed}
                         city={city}
-                        state={state} />
+                        state={state}
+                        src2={animal ==='dog' ? Dog : animal ==='cat' ? Cat : animal ==='bird' ? Bird : animal ==='rabbit' ? Rabbit : animal ==='reptile' ? Reptile : null } />
                         </Grid>
                         );
                 })}

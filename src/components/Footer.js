@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import {Typography } from '@material-ui/core';
-import Box from '@material-ui/core/Box';
+import { Box } from '@material-ui/core/';
 import footerImg1 from '../assets/Group 115.png'
 import footerImg2 from '../assets/Group 117.png'
 import footerImg3 from '../assets/Group 116.png'
@@ -57,13 +57,16 @@ function Footer() {
                         <img alt='footerImg3' src={footerImg3} />
                     </div>
                     <Box sx={{display:'flex', flexDirection:'column'}}>
-                        <Typography>
-                            <span>Need</span> help with adopting a pet?
+                        <Typography variant='h3'>
+                            <Box component='span' sx={{color: '#0D75ff'}}>Need</Box> help with <br></br> Adopting a pet?
                         </Typography>
-                        <Button color='primary' className={classes.btn} variant="contained">
-                            View all Pets
-                        </Button>
+                        <Box>
+                            <Button style={{width:150, marginTop: 10}} color='primary' className={classes.btn} variant="contained">
+                                View all Pets
+                            </Button>
+                        </Box>
                     </Box>
+
                     <div>
                         <img alt='footerImg4' src={footerImg4} />
                     </div>
