@@ -1,4 +1,7 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-expressions */
+import React, {useEffect, useState} from 'react';
 
 import { FormControl } from '@material-ui/core';
 import { InputLabel } from '@material-ui/core';
@@ -13,9 +16,7 @@ import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core'
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-
-
-// import {Data} from '../data/pets'
+import { locations, animals } from '../data/pets'
 
 const useStyles = makeStyles({
     searchIcon: {
@@ -33,54 +34,99 @@ const useStyles = makeStyles({
 
 function HeroSearch() {
     const classes = useStyles();
+    const [pets, setPets] = useState([]);
+    const [location, setLocation] = useState('');
+    const [animal, setAnimal] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const fetchPets = async () => {
+            setLoading(true)
+            try {
+                const res = await fetch(`https://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}`)
+                const data = await res.json();
+                setPets(data.pets)
+                setLoading(false)
+            } catch (error) {
+                alert(error.message)
+            }
+    }
+
+    useEffect(() => {
+        window.scroll(0, 0)  
+        fetchPets
+    }, [])
+
+    const handleLocationChange = (event) => {
+        setLocation(event.target.value)
+
+    }
+    const handleAnimalChange = (event) => {
+        setAnimal(event.target.value)
+    }
+
+    const submitHandler = (event) => {
+        event.preventDefault()
+        fetchPets()
+    }
+
+
+
+
+
+
   return <div style={{width: '50vw', height: 150, backgroundColor: '#fff', padding: 30, marginLeft: 50}}> 
 <Box sx={{padding: 2, borderRadius:50, display: 'flex', flexDirection: 'row', backgroundColor: '  rgba(13, 117, 255, 0.05)'}}>
-    <FormControl fullWidth>
+    <FormControl onSubmit={submitHandler} fullWidth>
     <InputLabel style={{marginLeft: 25}} id="location-label"> <GoLocation style={{marginRight: 7}} /> All Locations</InputLabel>
     <Select
         disableUnderline
         labelId="location-label"
         id="location-select"
-        // value={age}
-        
+        value={location}
         label="Location"
-        // onChange={handleChange}
+        onChange={handleLocationChange}
     >
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        { locations.map((location,key) => {
+            return(
+                <MenuItem key={key} value={location.value}>{location.label}</MenuItem>
+               
+                )})
+            }
     </Select>
     </FormControl>
-    <FormControl fullWidth>
+
+    <FormControl onSubmit={submitHandler} fullWidth>
     <InputLabel style={{marginLeft: 25}} id="animal-label">  <FaDog style={{marginRight: 7}} />Animal</InputLabel>
     <Select
         disableUnderline
         labelId="animal-label"
         id="animal-select"
-        // value={age}
+        value={animal}
         label="animal"
-        // onChange={handleChange}
+        onChange={handleAnimalChange}
     >
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        { animals.map((animal, key) => {
+            return (
+                <MenuItem key={key} value={animal.value}>{animal.label}</MenuItem>
+            )})
+            }
     </Select>
     </FormControl>
-    <FormControl fullWidth>
+
+    <FormControl onSubmit={submitHandler} fullWidth>
     <InputLabel style={{marginLeft: 25}} id="breed-label"> <GiScales style={{marginRight: 7}}/> All Breeds</InputLabel>
     <Select
         disableUnderline
         labelId="breed-label"
         id="breed-select"
-        // value={age}
         label="breed"
-        // onChange={handleChange}
+        
     >
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        <MenuItem value={'breed'}>Breed</MenuItem>
+        
     </Select>
     </FormControl>
+    
     <Box className={classes.searchIcon} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
             <FaSearch size={25}/>
           </Box>

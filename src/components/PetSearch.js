@@ -126,8 +126,8 @@ const handleReptile = () =>{
                     const { animal,images, name, breed, city, state } = animals;
                     return ( 
                         
-                        <Grid item xs={12} sm={6} md={4}>
-                           <CardItem key={key}
+                        <Grid item xs={12} sm={6} md={4} key={key}>
+                           <CardItem 
                         src={images[0]}
                         text={name}
                         breed={breed}

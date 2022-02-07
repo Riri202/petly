@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core'
 import Box from '@material-ui/core/Box';
@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     }
 })
 
-function CardItem({ src, src2, text, breed, state, city }) {
+function CardItem({ petID, src, src2, text, breed, state, city }) {
 const classes = useStyles()
 
   return <Card className={classes.root} >
@@ -55,7 +55,7 @@ const classes = useStyles()
                                 <Typography component="div" variant="h5">
                                 {text}
                                 </Typography>
-                                <Typography variant="subtitle1" color="text.secondary" component="div">
+                                <Typography variant="subtitle1" color="secondary" component="div">
                                 {breed}
                                 </Typography>
                                     
@@ -65,10 +65,10 @@ const classes = useStyles()
                                 </Box>
                         </Box>
                     <Box  sx={{ display: 'flex' }} className={classes.cardInfo} >
-                        <Button 
+                        <Link to= {`/pets/${petID}`}> <Button 
                         className={classes.btn}
                         color='primary'
-                        variant="contained">View Details</Button>
+                        variant="contained">View Details</Button></Link> 
                         <Typography>
                             {city}, {state}
                         </Typography>

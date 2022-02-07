@@ -33,7 +33,7 @@ const useStyles = makeStyles({
 
 
 
-function NavBar() {
+function NavBar( ) {
   const classes = useStyles()
 
   return <Box className={classes.root}>
@@ -57,7 +57,7 @@ function NavBar() {
                       
           </Box>
                   <Box sx={{ flexGrow: 1 }} />
-                  <ThemeButton style={{paddingRight: 10}}/>
+                  <ThemeButton style={{paddingRight: 10}} />
                 </Box> 
           
             
