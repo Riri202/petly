@@ -32,7 +32,7 @@ const useStyles = makeStyles({
        
 })
 
-function HeroSearch() {
+function HeroSearch({darkMode, theme} ) {
     const classes = useStyles();
     const [pets, setPets] = useState([]);
     const [location, setLocation] = useState('');
@@ -74,10 +74,10 @@ function HeroSearch() {
 
 
 
-  return <div style={{width: '50vw', height: 150, backgroundColor: '#fff', padding: 30, marginLeft: 50}}> 
+  return <div style={{width: '50vw', height: 150, backgroundColor: darkMode ?  theme.palette.background.default : '#fff', padding: 30, marginLeft: 50}}> 
 <Box sx={{padding: 2, borderRadius:50, display: 'flex', flexDirection: 'row', backgroundColor: '  rgba(13, 117, 255, 0.05)'}}>
     <FormControl onSubmit={submitHandler} fullWidth>
-    <InputLabel style={{marginLeft: 25}} id="location-label"> <GoLocation style={{marginRight: 7}} /> All Locations</InputLabel>
+    <InputLabel style={{marginLeft: 25}} id="location-label"><GoLocation style={{marginRight: 7}} /> All Locations </InputLabel>
     <Select
         disableUnderline
         labelId="location-label"

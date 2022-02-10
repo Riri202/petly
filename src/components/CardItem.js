@@ -9,6 +9,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
+import { GoLocation } from 'react-icons/go';
 
 
 
@@ -55,7 +56,7 @@ const classes = useStyles()
                                 <Typography component="div" variant="h5">
                                 {text}
                                 </Typography>
-                                <Typography variant="subtitle1" color="secondary" component="div">
+                                <Typography variant="subtitle1" component="div">
                                 {breed}
                                 </Typography>
                                     
@@ -65,12 +66,13 @@ const classes = useStyles()
                                 </Box>
                         </Box>
                     <Box  sx={{ display: 'flex' }} className={classes.cardInfo} >
-                        <Link to= {`/pets/${petID}`}> <Button 
+                        <Link to= {`/pets/${petID}`} style={{textDecoration:'none'}}> <Button 
                         className={classes.btn}
                         color='primary'
+                        
                         variant="contained">View Details</Button></Link> 
                         <Typography>
-                            {city}, {state}
+                            <GoLocation size={20} styles={{marginRight: 3}}/> {city}, {state}
                         </Typography>
                                 
                      </Box >

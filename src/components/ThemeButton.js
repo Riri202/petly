@@ -8,7 +8,7 @@ import { IoIosMoon } from 'react-icons/io';
 
 
 
-function ThemeButton() {
+function ThemeButton({toggleLight, toggleDark }) {
   
   return <div>
  
@@ -18,11 +18,11 @@ function ThemeButton() {
    
 
        
-        <Button style={{padding:20}}>  
+        <Button onClick={toggleLight} style={{padding:20}}>  
 
             <FiSun/>
          </Button>
-        <Button style={{padding:20}}>
+        <Button onClick={toggleDark}  style={{padding:20}}>
             <IoIosMoon/>
         </Button>
      

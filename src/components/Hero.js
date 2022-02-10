@@ -7,15 +7,19 @@ import Cat from '../assets/Rectangle-257.png'
 import Dog1 from '../assets/Rectangle-503.png'
 import Dog2 from '../assets/Rectangle-504.png'
 import Bird from '../assets/Rectangle-505.png'
+//import Container from '@material-ui/core/Container';
 
 
 
 const useStyles = makeStyles({
     root: {
         backgroundColor: '  rgba(13, 117, 255, 0.05)',
-        height: '110vh',
+        
         display: 'flex',
         flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        
         flexWrap: 'wrap',
         flexBasis: '33.33333%'
 
@@ -43,7 +47,7 @@ const useStyles = makeStyles({
     }
 })
 
-function Hero() {
+function Hero( {theme, darkMode} ) {
 const classes = useStyles()
 
   return <div className={classes.root}>
@@ -65,7 +69,7 @@ const classes = useStyles()
         </div>
 
             <div>
-                <HeroSearch/>
+                <HeroSearch  theme={theme} darkMode={darkMode}/>
             </div>
                 
   </div>

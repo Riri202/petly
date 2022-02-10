@@ -24,7 +24,7 @@ const useStyles = makeStyles({
         padding: 5,
     },
     root: {
-        backgroundColor:'#F3F5FB',
+   
         height: 500,
         marginTop: 30,
     },
@@ -37,10 +37,10 @@ const useStyles = makeStyles({
 })
 
 
-function Footer() {
+function Footer({darkMode, theme}) {
     const classes = useStyles();
   return <div>
-      <Box className={classes.root} sx={{display:'flex', flexDirection:'column'}}>
+      <Box className={classes.root} style={{ backgroundColor: darkMode ?  theme.palette.background.default : '#F3F5FB'}} sx={{display:'flex', flexDirection:'column'}}>
            
                 <Box sx={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
                     <div>

@@ -33,14 +33,14 @@ const useStyles = makeStyles({
 
 
 
-function NavBar( ) {
+function NavBar({toggleLight, darkMode, toggleDark} ) {
   const classes = useStyles()
 
   return <Box className={classes.root}>
    
  
 
-  <AppBar elevation={0} color="secondary" position="fixed" style={{padding: 12}} >
+  <AppBar elevation={0} color={darkMode ? 'theme.palette.background.paper' : '#fff'} style={{padding: 12 }}  position="fixed"  >
 
     
   
@@ -53,11 +53,11 @@ function NavBar( ) {
                       
                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{marginTop: 12, marginLeft: 8}}>
                         Petly
-                      </Typography>
+                    </Typography>
                       
           </Box>
                   <Box sx={{ flexGrow: 1 }} />
-                  <ThemeButton style={{paddingRight: 10}} />
+                  <ThemeButton  toggleLight={toggleLight}  toggleDark={toggleDark} style={{paddingRight: 10}} />
                 </Box> 
           
             

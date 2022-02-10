@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/jsx-key */
-// import axios from 'axios';
+
 import React, { useState, useEffect } from 'react';
 import CardItem from './CardItem';
 import {Container, Typography } from '@material-ui/core';
@@ -13,11 +13,9 @@ import Bird from '../assets/Bird.png'
 import Rabbit from '../assets/Rabbit.png'
 import Reptile from '../assets/Reptile.png'
 import Skeleton from '@material-ui/lab/Skeleton'
-//import { useParams } from 'react-router-dom';
-// import './Cards.css'
 
 function Cards() {
-//const {id} = useParams()   
+  
 const [pets, setPet] = useState([]);
 const [loading, setLoading] =useState(false)
 
@@ -41,8 +39,8 @@ const fetchPets = async () => {
 
         return (
         <>
-       {loading ?  <Typography variant='h5' style={{ color:'#344062', marginTop: 70, marginBottom: 30 }}>Search results</Typography> : <Container className='card-wrapper'>
-           <Typography variant='h5' style={{ color:'#344062', marginTop: 70, marginLeft: 90, marginBottom: 30 }}>Search results</Typography>
+       {loading ?  <Typography variant='h4' style={{marginTop: 70, marginBottom: 30 }}>Search results</Typography> : <Container>
+           <Typography variant='h4' style={{ marginTop: 70, marginBottom: 30 }}>Search results</Typography>
        <Grid container spacing={5}> {pets && pets.map((pet, key) => {
                         const {id, animal, images, name, breed, city, state } = pet;
                         return ( 
