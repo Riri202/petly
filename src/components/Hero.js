@@ -54,7 +54,7 @@ const classes = useStyles()
 <div>
   
         <div className={classes.heroText}>
-            <Typography style={{color: '#0D75FF', fontSize: 14}} >
+            <Typography style={{color: '#0D75FF'}} variant='body1' >
                 FIND SPECIAL PETS
             </Typography>
             <Typography variant='h3' style={{color: '#344062'}}>
@@ -63,7 +63,7 @@ const classes = useStyles()
             <Typography variant='h3' style={{color: '#D21A30'}}>
                 Adopt One
             </Typography>
-            <Typography style={{fontWeight: 'light'}}>
+            <Typography style={{fontWeight: 'light'}} variant='body1' >
                 Pet Adoption is quickly becoming the preferred way to find a new dog, puppy, cat <br></br> or kitten.
             </Typography>
         </div>

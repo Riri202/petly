@@ -16,26 +16,74 @@ import { GoLocation } from 'react-icons/go';
 
 
 
-const useStyles = makeStyles({
-    btn: {
-        backgroundColor: '#0D75FF',
-        borderRadius: 50,
-        fontColor: 'white',
-        padding: 20,
-        fontSize:13,
-        height: 10,
-    },
-    root:{
-        maxWidth:355,
+// const useStyles = makeStyles(  {
+//     btn: {
+//         backgroundColor: '#0D75FF',
+//         borderRadius: 50,
+//         fontColor: 'white',
+//         padding: 20,
+//         fontSize:13,
+//         height: 10,
+//     },
+//     root:{
+//         maxWidth:355,
         
        
-    },
-    media: {
-        height:200
-    },
-    cardInfo:{
-        justifyContent: 'space-between'
-    }
+//     },
+//     media: {
+//         height:200
+//     },
+//     cardInfo:{
+//         justifyContent: 'space-between'
+//     },
+//     responsiveLocationIcon: {
+//         [theme.breakpoints.down('md')]: {
+//             fontSize = 15
+//         }
+//     }
+// })
+
+const useStyles = makeStyles( theme => {
+    return {
+        btn: {
+                    backgroundColor: '#0D75FF',
+                    borderRadius: 50,
+                    fontColor: 'white',
+                    padding: 20,
+                    fontSize:13,
+                    height: 10,
+                    marginLeft: -5,
+                    [theme.breakpoints.down('md')]: {
+                        fontSize: 11,
+                        padding: 17
+                    },
+                    [theme.breakpoints.down('sm')]: {
+                        fontSize: 8,
+                        padding: 13,
+                    },
+                    [theme.breakpoints.down('xs')]: {
+                        fontSize: 6,
+                        padding: 10, }
+                },
+                root:{
+                    maxWidth:355,
+                    
+                   
+                },
+                media: {
+                    height:200
+                },
+                cardInfo:{
+                    justifyContent: 'space-between',
+                    marginTop: 5
+                },
+                responsiveLocationIcon: {
+                    [theme.breakpoints.down('md')]: {
+                        width: 15,
+                        height: 15
+                    }
+                }
+        }
 })
 
 function CardItem({ petID, src, src2, text, breed, state, city }) {
@@ -72,7 +120,7 @@ const classes = useStyles()
                         
                         variant="contained">View Details</Button></Link> 
                         <Typography>
-                            <GoLocation size={20} styles={{marginRight: 3}}/> {city}, {state}
+                            <GoLocation className={classes.responsiveLocationIcon} size={20} styles={{marginRight: 3}}/> {city}, {state}
                         </Typography>
                                 
                      </Box >

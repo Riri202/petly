@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core'
 import ThemeButton from './ThemeButton';
 import Logo from '../assets/Logo.png'
+//import {Container} from '@material-ui/core';
 //import Toolbar from '@material-ui/core/Toolbar'
 
 
@@ -15,6 +16,9 @@ import Logo from '../assets/Logo.png'
 const useStyles = makeStyles({
   root: {
       height: 90,
+    
+     
+     
       
       
       
@@ -45,13 +49,13 @@ function NavBar({toggleLight, darkMode, toggleDark} ) {
     
   
 
-    <Box  sx={{display: 'flex', flexDirection: 'row'}}>
+    <Box  sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
       <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}}>
           <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
             <img alt='petly-logo' src={Logo}/>
           </Box>
                       
-                   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{marginTop: 12, marginLeft: 8}}>
+                   <Typography variant="h6" component="div"  style={{marginTop: 12, marginLeft: 8}}>
                         Petly
                     </Typography>
                       
@@ -61,7 +65,7 @@ function NavBar({toggleLight, darkMode, toggleDark} ) {
                 </Box> 
           
             
-           
+              
         </AppBar>
 </Box>
 };

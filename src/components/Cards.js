@@ -39,7 +39,7 @@ const fetchPets = async () => {
 
         return (
         <>
-       {loading ?  <Typography variant='h4' style={{marginTop: 70, marginBottom: 30 }}>Search results</Typography> : <Container>
+       {loading ?  <Typography variant='h4' style={{marginTop: 70, marginBottom: 30 }}>Search results</Typography> : <Container  style={{paddingLeft: 55, paddingRight: 55}}>
            <Typography variant='h4' style={{ marginTop: 70, marginBottom: 30 }}>Search results</Typography>
        <Grid container spacing={5}> {pets && pets.map((pet, key) => {
                         const {id, animal, images, name, breed, city, state } = pet;
@@ -56,7 +56,7 @@ const fetchPets = async () => {
                             </Grid>
                             );
                     })}
-                    </Grid>
+                    </Grid> 
                 </Container>} 
         </> );
 }

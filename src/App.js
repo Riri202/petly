@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable no-undef */
 import React, { useState } from 'react'
 import './App.css';
@@ -24,7 +25,7 @@ const onToggleLight = () => {
   setdarkMode(false)
 }
   
-
+const defaultTheme = createTheme();
   const theme = createTheme ({
     palette: {
       type: darkMode ? 'dark': 'light',
@@ -44,23 +45,54 @@ const onToggleLight = () => {
        "fontWeightBold": 600,
        allVariants: {
          color: darkMode ?  '#fff' :  '#666879'
-       }
+       },
+       h5: {
+         [defaultTheme.breakpoints.down('md')]: {
+           fontSize: 15
+         },
+         
+       },
+       'subtitle1': {
+        [defaultTheme.breakpoints.down('md')]: {
+          fontSize: 12
+        },
+        
+      },
+       'body1': {
+        [defaultTheme.breakpoints.down('md')]: {
+          fontSize: 13
+        },
+        
+      }
     },
+   
     
     
 });
 
 
+// theme.typography.h3: {
+      
+//   [theme.breakpoints.down('md')]: {
+//     fontSize: '0.8rem',
+//   },
+
+// }
+
+
+
+
+
   
   return (
     <ThemeProvider theme={theme}>
-      <Paper>
+      <Paper style={{width:'100%', height:'auto', padding: 0, margin:0, overflowX: 'hidden'}}>
     <Router className="App">
     <NavBar darkMode={darkMode} toggleLight={onToggleLight}  toggleDark={onToggleDark}/>
     
 
     <Routes>
-      <Route exact path='/' element={<HomePage  theme={theme} darkMode={darkMode} />}/>
+      <Route path='/' element={<HomePage  theme={theme} darkMode={darkMode} />}/>
       <Route path='/pets/:id' element={<PetDetails/>}/>
     </Routes>
        
