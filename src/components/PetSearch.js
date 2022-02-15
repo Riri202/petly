@@ -16,20 +16,48 @@ import CardItem from './CardItem';
 import CardSkeleton from './CardSkeleton';
 
 
-const useStyles = makeStyles({
-    root: {
-        height: 100,
-        backgroundColor: '  rgba(13, 117, 255, 0.05)',
-        width: 100,
-        marginRight: 15,
-        marginTop: 10
-
-    },
-    container: {
-        paddingTop: 80,
-        paddingLeft: 55,
-        paddingRight: 55,
-        marginBottom: 60,
+const useStyles = makeStyles( theme => {
+    return {
+        root: {
+            height: 100,
+            backgroundColor: '  rgba(13, 117, 255, 0.05)',
+            width: 100,
+            marginRight: 15,
+            marginTop: 10,
+            [theme.breakpoints.down('xs')]: {
+                display: 'flex',
+                width: '100%',
+                flexGrow: 1,
+                height: 50,
+            }
+    
+        },
+        btnInnerWrapper: {
+            display:'flex',
+            flexDirection: 'column',
+            [theme.breakpoints.down('xs')]: {
+                flexDirection: 'row',
+                
+            }
+        },
+        btnText: {
+            [theme.breakpoints.down('xs')]: {
+               marginLeft: 10,
+            }
+        },
+        container: {
+            paddingTop: 80,
+            paddingLeft: 55,
+            paddingRight: 55,
+            marginBottom: 60,
+        },
+        btnWrapper: {
+            marginBottom: 8,
+            [theme.breakpoints.down('xs')]: {
+                display: 'flex',
+                flexDirection: 'column',
+            }
+        }
     }
 })
 
@@ -91,35 +119,39 @@ const handleReptile = () =>{
 
   return  <div className={classes.container}>
   <Typography variant='h4'>Browse Through Pet Types</Typography>
-  <Box sx={{mb: 8}}>
+  <Box className={classes.btnWrapper}>
         <Button onClick={handleDog} className={classes.root} color='primary' variant={presentTab === 'dog' ? 'outlined' : 'text'} size='large'>
-        <Box sx={{ flexDirection: 'column'}}> 
+        <Box className={classes.btnInnerWrapper}> 
             <img alt= 'Dog' src={Dog}/>
-            <Typography>Dog</Typography>
+            <Typography className={classes.btnText}>Dog</Typography>
         </Box>
         </Button>
+
         <Button onClick={handleCat}  className={classes.root} color='primary' variant={presentTab === 'cat' ? 'outlined' : 'text'}  size='large'>
-        <Box sx={{ flexDirection: 'column'}}> 
+        <Box className={classes.btnInnerWrapper}> 
             <img alt='Cat' src={Cat}/>
-            <Typography>Cat</Typography>
+            <Typography className={classes.btnText}>Cat</Typography>
         </Box>
         </Button>
+
         <Button onClick={handleBird}  className={classes.root} color='primary' variant={presentTab === 'bird' ? 'outlined' : 'text'}  size='large'>
-        <Box sx={{ flexDirection: 'column'}}> 
+        <Box className={classes.btnInnerWrapper}> 
             <img alt='Bird' src={Bird}/>
-            <Typography>Bird</Typography>
+            <Typography className={classes.btnText}>Bird</Typography>
         </Box>
         </Button>
+
         <Button onClick={handleRabbit}  className={classes.root} color='primary' variant={presentTab === 'rabbit' ? 'outlined' : 'text'}  size='large'>
-        <Box sx={{ flexDirection: 'column'}}> 
+        <Box className={classes.btnInnerWrapper}> 
             <img alt='Rabbit' src={Rabbit}/>
-            <Typography>Rabbit</Typography>
+            <Typography className={classes.btnText}>Rabbit</Typography>
         </Box>
         </Button>
+
         <Button onClick={handleReptile}  className={classes.root} color='primary' variant={presentTab === 'reptile' ? 'outlined' : 'text'}  size='large'>
-        <Box sx={{ flexDirection: 'column'}}> 
+        <Box className={classes.btnInnerWrapper}> 
             <img alt='Reptile' src={Reptile}/>
-            <Typography>Reptile</Typography>
+            <Typography className={classes.btnText}>Reptile</Typography>
         </Box>
         </Button>
 </Box>
