@@ -30,7 +30,7 @@ const useStyles = makeStyles( theme => {
 
   },
   logo: {
-    backgroundColor: '#0D75FF',
+    
     width: 50,
     height: 50,
     borderRadius:50,
@@ -74,7 +74,7 @@ function NavBar({toggleLight, darkMode, toggleDark} ) {
 
     <Box  sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
       <Box sx={{display: 'flex', flexDirection: 'row'}} className={classes.logoContainer}>
-          <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+          <Box className={classes.logo} style={{ backgroundColor: darkMode ? '#D21A30' :  '#0D75FF'}} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
             <img alt='petly-logo' src={Logo} className={classes.logoImg} />
           </Box>
                       

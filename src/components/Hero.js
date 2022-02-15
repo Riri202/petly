@@ -29,18 +29,36 @@ const useStyles = makeStyles(theme => {
         },
         heroText: {
             margin: 'auto',
-            paddingBottom: 50
+            paddingBottom: 30
         },
         heroSearch: {
-            margin: 'auto'
+            margin: 'auto',
+            [theme.breakpoints.down('md')]: {
+                paddingBottom: 30
+            }
         },
         imgContainer: {
             display: 'flex',
             flexDirection: 'column',
-            
-            // paddingLeft: 80
-            
-            
+            [theme.breakpoints.down('md')]: {
+               width: 354,
+               height: 338,
+            },
+            [theme.breakpoints.down('xs')]: {
+                width: 254,
+                height: 238,
+             }
+
+        },
+        imgBox: {
+            [theme.breakpoints.down('md')]: {
+                width: 177,
+                height: 169,
+             },
+             [theme.breakpoints.down('xs')]: {
+                width: 127,
+                height: 119,
+             }
         },
         imgCon1: {
             display: 'flex',
@@ -63,7 +81,7 @@ const classes = useStyles()
             <Typography style={{color: '#0D75FF'}} variant='body1' >
                 FIND SPECIAL PETS
             </Typography>
-            <Typography variant='h3' style={{color: '#344062'}}>
+            <Typography variant='h3' style={{color: darkMode ? '#fff' : '#344062'}}>
                 Think you Love Pets?
             </Typography>
             <Typography variant='h3' style={{color: '#D21A30'}}>
@@ -82,20 +100,20 @@ const classes = useStyles()
         <div className={classes.imgContainer}>
 
                 <div className={classes.imgCon1}>
-                    <div>
-                        <img alt='cat' src={Cat}/>
+                    <div  className={classes.imgBox}>
+                        <img width='100%' height='auto' alt='cat' src={Cat}/>
                     </div>
-                    <div>
-                        <img  alt='dog'src={Dog1}/>
+                    <div className={classes.imgBox} >
+                        <img width='100%' height='auto' alt='dog'src={Dog1}/>
                     </div>
                 </div>
                 <div className={classes.imgCon2}>
                 
-                    <div>
-                        <img alt='dog2' src={Dog2}/>
+                    <div className={classes.imgBox}>
+                        <img width='100%' height='auto' alt='dog2' src={Dog2}/>
                     </div>
-                    <div>
-                        <img alt='bird' src={Bird}/>
+                    <div className={classes.imgBox}>
+                        <img width='100%' height='auto' alt='bird' src={Bird}/>
                     </div>
                     
                 </div>

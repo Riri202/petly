@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme =>{
         }
     },
     logo: {
-        backgroundColor: '#0D75FF',
+        
         width: 50,
         height: 50,
         borderRadius:50,
@@ -151,7 +151,7 @@ function Footer({darkMode, theme}) {
 
                 <Box className={classes.responsiveFooterContent} sx={{display:'flex', flexDirection:'row', justifyContent:'space-evenly'}}>
                     <Box sx={{display: 'flex', flexDirection: 'row'}}>  
-                        <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                        <Box className={classes.logo} style={{ backgroundColor: darkMode ? '#D21A30' :  '#0D75FF'}} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
                             <img alt='petly-logo' src={Logo} className={classes.logoImg}/>
                         </Box>
                         
