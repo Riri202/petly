@@ -11,39 +11,45 @@ import Bird from '../assets/Rectangle-505.png'
 
 
 
-const useStyles = makeStyles({
-    root: {
-        backgroundColor: '  rgba(13, 117, 255, 0.05)',
-        
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        
-        flexWrap: 'wrap',
-        flexBasis: '33.33333%'
-
-    },
-    heroText: {
-        paddingTop: 100,
-        paddingLeft: 50,
-        paddingBottom: 100
-    },
-    imgContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        paddingTop: 70,
-        paddingLeft: 80
-        
-        
-    },
-    imgCon1: {
-        display: 'flex',
-        flexDirection: 'row'
-    },
-    imgCon2: {
-        display: 'flex',
-        flexDirection: 'row'
+const useStyles = makeStyles(theme => {
+    return {
+        root: {
+            backgroundColor: '  rgba(13, 117, 255, 0.05)',
+            padding: 50,
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            flexBasis: '33.33333%',
+            [theme.breakpoints.down('md')]: {
+                justifyContent: 'center',
+            }
+    
+        },
+        heroText: {
+            margin: 'auto',
+            paddingBottom: 50
+        },
+        heroSearch: {
+            margin: 'auto'
+        },
+        imgContainer: {
+            display: 'flex',
+            flexDirection: 'column',
+            
+            // paddingLeft: 80
+            
+            
+        },
+        imgCon1: {
+            display: 'flex',
+            flexDirection: 'row'
+        },
+        imgCon2: {
+            display: 'flex',
+            flexDirection: 'row'
+        }
     }
 })
 
@@ -51,7 +57,7 @@ function Hero( {theme, darkMode} ) {
 const classes = useStyles()
 
   return <div className={classes.root}>
-<div>
+<div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
   
         <div className={classes.heroText}>
             <Typography style={{color: '#0D75FF'}} variant='body1' >
@@ -68,7 +74,7 @@ const classes = useStyles()
             </Typography>
         </div>
 
-            <div>
+            <div className={classes.heroSearch}>
                 <HeroSearch  theme={theme} darkMode={darkMode}/>
             </div>
                 

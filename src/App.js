@@ -51,7 +51,13 @@ const defaultTheme = createTheme();
            fontSize: 15
          },
          
-       },
+        },
+        h6: {
+          [defaultTheme.breakpoints.down('xs')]: {
+            fontSize: 15
+          },
+        },
+         
        'subtitle1': {
         [defaultTheme.breakpoints.down('md')]: {
           fontSize: 12
@@ -62,7 +68,21 @@ const defaultTheme = createTheme();
         [defaultTheme.breakpoints.down('md')]: {
           fontSize: 13
         },
+        [defaultTheme.breakpoints.down('sm')]: {
+          fontSize: 12
+        },
+        [defaultTheme.breakpoints.down('xs')]: {
+          fontSize: 11
+        },
         
+      },
+      h3: {
+        [defaultTheme.breakpoints.down('xs')]: {
+          fontSize: 25
+        },
+        [defaultTheme.breakpoints.down('sm')]: {
+          fontSize: 35
+        },
       }
     },
    

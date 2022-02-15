@@ -18,17 +18,53 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { locations, animals } from '../data/pets'
 
-const useStyles = makeStyles({
-    searchIcon: {
-        backgroundColor: '#0D75FF',
-        width: 200,
-        height: 50,
-        borderRadius:50,
-        padding:5,
-        color: 'white',
-        marginTop: -8
-        
+const useStyles = makeStyles( theme => {
+    return {
+        root: {
+            width: '40vw', 
+            padding: 20, 
+            borderRadius: 5,
+            [theme.breakpoints.down('sm')]: {
+              width: '70vw'
+            }
         },
+        searchIconContainer: {
+            backgroundColor: '#0D75FF',
+            width: 200,
+            height: 50,
+            borderRadius:50,
+            padding:5,
+            color: 'white',
+            marginTop: -4,
+            [theme.breakpoints.down('md')]: {
+                width: 50,
+                padding: 2,
+                marginTop: 10,
+                marginLeft: 10,
+
+            }
+            
+            },
+            searchIcon: {
+                width: 25,
+                height: 25,
+            [theme.breakpoints.down('sm')]: {
+                width: 20,
+                height: 20,
+            }
+        },
+        formContainer : {
+            padding: 2, 
+            borderRadius:50, 
+            display: 'flex', 
+            flexDirection: 'row', 
+            backgroundColor: '  rgba(13, 117, 255, 0.05)',
+            [theme.breakpoints.down('md')]: {
+                flexDirection: 'column',
+                borderRadius: 0
+            }
+        }    
+    }
        
 })
 
@@ -74,8 +110,8 @@ function HeroSearch({darkMode, theme} ) {
 
 
 
-  return <div style={{width: '50vw', height: 150, backgroundColor: darkMode ?  theme.palette.background.default : '#fff', padding: 30, marginLeft: 50}}> 
-<Box sx={{padding: 2, borderRadius:50, display: 'flex', flexDirection: 'row', backgroundColor: '  rgba(13, 117, 255, 0.05)'}}>
+  return <div className={classes.root} style={{ backgroundColor: darkMode ?  theme.palette.background.default : '#fff'}}> 
+<Box className={classes.formContainer}>
     <FormControl onSubmit={submitHandler} fullWidth>
     <InputLabel style={{marginLeft: 25}} id="location-label"><GoLocation style={{marginRight: 7}} /> All Locations </InputLabel>
     <Select
@@ -127,19 +163,20 @@ function HeroSearch({darkMode, theme} ) {
     </Select>
     </FormControl>
     
-    <Box className={classes.searchIcon} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-            <FaSearch size={25}/>
+    <Box className={classes.searchIconContainer} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+            <FaSearch  className={classes.searchIcon}/>
           </Box>
           
     </Box>
+
     <Typography style={{margin: 15}}>
               You may be looking for
     </Typography>
     <Button style={{backgroundColor: '  rgba(13, 117, 255, 0.05)', marginRight: 10}} color='primary' variant="text" endIcon={<ImCancelCircle/>}>
-        Dogs
+       <Typography color='primary'>Dogs</Typography> 
     </Button>
     <Button style={{backgroundColor: '  rgba(13, 117, 255, 0.05)'}} color='primary'  variant="text" endIcon={<ImCancelCircle/>}>
-        Cats
+       <Typography color='primary'>Cats</Typography> 
     </Button>
   </div>;
 }

@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core'
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid'
 import CardItem from './CardItem';
+import CardSkeleton from './CardSkeleton';
 
 
 const useStyles = makeStyles({
@@ -123,7 +124,7 @@ const handleReptile = () =>{
         </Button>
 </Box>
  <Box sx={{mb: 3}}><Typography variant = 'h4' >{presentAnimal}s</Typography> </Box>
-<Grid container spacing={5}> {filteredAnimal && filteredAnimal.map((animals, key) => {
+ {loading ? <CardSkeleton/> : <> <Grid container spacing={5}> {filteredAnimal && filteredAnimal.map((animals, key) => {
                     const { animal,images, name, breed, city, state } = animals;
                     return ( 
                         
@@ -138,7 +139,8 @@ const handleReptile = () =>{
                         </Grid>
                         );
                 })}
-                </Grid>
+                </Grid> </> }
+
 </div>;
 }
 

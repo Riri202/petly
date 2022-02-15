@@ -66,7 +66,7 @@ const useStyles = makeStyles( theme => {
                         padding: 10, }
                 },
                 root:{
-                    maxWidth:355,
+                    //maxWidth:355,
                     
                    
                 },
