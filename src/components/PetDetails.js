@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-//import {Container, Typography } from '@material-ui/core';
+import PetDetailsSkeleton from './PetDetailsSkeleton';
 import Grid from '@material-ui/core/Grid'
 import { Box } from '@material-ui/core/';
 import Avatar from '@material-ui/core/Avatar';
@@ -25,6 +25,7 @@ import Modal from '@material-ui/core/Modal';
 
 
 
+
 const useStyles = makeStyles( theme => {
         return {
           wrapper: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles( theme => {
           },
           root: {
             borderRadius: 10,
-            padding: 15,
+            padding: 30,
             backgroundColor: '#f8fafd',
             display: 'flex',
             flexDirection: 'column',
@@ -80,7 +81,7 @@ const useStyles = makeStyles( theme => {
              
           },
           imgTop: {
-            width: '60vw',
+            width: '65vw',
             marginBottom: 20,
             marginTop: 20
            
@@ -91,6 +92,7 @@ const useStyles = makeStyles( theme => {
             width: '70vw',
             justifyContent: 'space-evenly',
             overflowX: 'scroll',
+            
            
           },
           imgCarouselItem: {
@@ -98,6 +100,8 @@ const useStyles = makeStyles( theme => {
             height: 97,
             borderRadius: 5,
             margin: 5,
+            display: 'flex',
+            
           },
         
           description: {
@@ -240,7 +244,7 @@ const handleClose = () => {
     }
   return (
     <>
-    {loading ? <h4>Loading</h4> : 
+    {loading ?<> <PetDetailsSkeleton theme={theme} darkMode={darkMode} /> </>: 
    
       <div className={classes.wrapper} >
         {pets && pets.map((pet, key) => {
@@ -276,11 +280,14 @@ const handleClose = () => {
                  <img src={pet.images[0]} alt='pet' style={{height: 247, width: '100%', borderRadius: 5, objectFit: 'cover'}} />
               </div>   
             
-              <div className={classes.imgCarousel} >
+              <div  className={classes.imgCarousel} >
                 {pet.images.map((photo, key) => {
                   return (
-                      <img src={photo} key={key} alt='pet' className={classes.imgCarouselItem} />
+                    
+                      <img src={photo} key={key} alt='pet' style={{display: 'flex', alignSelf: 'flex-start'}} className={classes.imgCarouselItem} />
+                     
                   )
+
                 })}
               </div>  
 

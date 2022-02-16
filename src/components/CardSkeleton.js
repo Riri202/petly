@@ -10,7 +10,24 @@ const useStyles = makeStyles(theme => {
         root: {
             padding: 10,
            
-        }
+        },
+        responsiveBtn: {
+            width: 100,
+            height: 40,
+          [theme.breakpoints.down('md')]: {
+              width: 80,
+              height: 30, 
+  
+            },
+            [theme.breakpoints.down('sm')]: {
+              width: 60,
+              height: 20,
+            },
+            [theme.breakpoints.down('xs')]: {
+              width: 52,
+              height: 17,
+            }
+        },
     }
 })
 
@@ -33,7 +50,7 @@ function CardSkeleton() {
                 </Box>
            </Box>
            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-               <div> <Skeleton variant='circular' width= {100} height={40} style={{ borderRadius: 25}} /> </div>
+               <div> <Skeleton variant='circular' className={classes.responsiveBtn} style={{ borderRadius: 25}} /> </div>
                 <Skeleton variant='text' width={90}/>
            </Box>
      </Card>
@@ -54,7 +71,7 @@ function CardSkeleton() {
                 </Box>
            </Box>
            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-               <div> <Skeleton variant='circular' width= {100} height={40} style={{ borderRadius:25}} /> </div>
+               <div> <Skeleton variant='circular' className={classes.responsiveBtn}  style={{ borderRadius:25}} /> </div>
                 <Skeleton variant='text' width={90}/>
            </Box>
      </Card>
@@ -75,7 +92,7 @@ function CardSkeleton() {
                 </Box>
            </Box>
            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-               <div> <Skeleton variant='circular' width= {100} height={40} style={{ borderRadius: 25}} /> </div>
+               <div> <Skeleton variant='circular' className={classes.responsiveBtn} style={{ borderRadius: 25}} /> </div>
                 <Skeleton variant='text' width={90}/>
            </Box>
      </Card>
@@ -96,7 +113,7 @@ function CardSkeleton() {
                 </Box>
            </Box>
            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-               <div> <Skeleton variant='circular' width= {100} height={40} style={{ borderRadius: 25}} /> </div>
+               <div> <Skeleton variant='circular' className={classes.responsiveBtn}  style={{ borderRadius: 25}} /> </div>
                 <Skeleton variant='text' width={90}/>
            </Box>
      </Card>
