@@ -46,10 +46,31 @@ const defaultTheme = createTheme();
        allVariants: {
          color: darkMode ?  '#fff' :  '#666879'
        },
+       h3: {
+        [defaultTheme.breakpoints.down('sm')]: {
+          fontSize: 35
+        },
+        [defaultTheme.breakpoints.down('xs')]: {
+          fontSize: 25
+        },
+       
+      },
+      h4: {
+        [defaultTheme.breakpoints.down('sm')]: {
+          fontSize: 25
+        },
+        [defaultTheme.breakpoints.down('xs')]: {
+          fontSize: 20
+        },
+        
+      },
        h5: {
          [defaultTheme.breakpoints.down('md')]: {
            fontSize: 15
          },
+         [defaultTheme.breakpoints.down('xs')]: {
+          fontSize: 12
+        },
          
         },
         h6: {
@@ -61,6 +82,9 @@ const defaultTheme = createTheme();
        'subtitle1': {
         [defaultTheme.breakpoints.down('md')]: {
           fontSize: 12
+        },
+        [defaultTheme.breakpoints.down('xs')]: {
+          fontSize: 10
         },
         
       },
@@ -76,32 +100,12 @@ const defaultTheme = createTheme();
         },
         
       },
-      h3: {
-        [defaultTheme.breakpoints.down('xs')]: {
-          fontSize: 25
-        },
-        [defaultTheme.breakpoints.down('sm')]: {
-          fontSize: 35
-        },
-      }
+      
     },
    
     
     
 });
-
-
-// theme.typography.h3: {
-      
-//   [theme.breakpoints.down('md')]: {
-//     fontSize: '0.8rem',
-//   },
-
-// }
-
-
-
-
 
   
   return (
@@ -113,7 +117,7 @@ const defaultTheme = createTheme();
 
     <Routes>
       <Route path='/' element={<HomePage  theme={theme} darkMode={darkMode} />}/>
-      <Route path='/pets/:id' element={<PetDetails/>}/>
+      <Route path='/pets/:id' element={<PetDetails theme={theme} darkMode={darkMode}/>}/>
     </Routes>
        
       

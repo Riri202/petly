@@ -157,7 +157,7 @@ const handleReptile = () =>{
 </Box>
  <Box sx={{mb: 3}}><Typography variant = 'h4' >{presentAnimal}s</Typography> </Box>
  {loading ? <CardSkeleton/> : <> <Grid container spacing={5}> {filteredAnimal && filteredAnimal.map((animals, key) => {
-                    const { animal,images, name, breed, city, state } = animals;
+                    const {id, animal,images, name, breed, city, state } = animals;
                     return ( 
                         
                         <Grid item xs={12} sm={6} md={4} key={key}>
@@ -167,6 +167,7 @@ const handleReptile = () =>{
                         breed={breed}
                         city={city}
                         state={state}
+                        petID={id}
                         src2={animal ==='dog' ? Dog : animal ==='cat' ? Cat : animal ==='bird' ? Bird : animal ==='rabbit' ? Rabbit : animal ==='reptile' ? Reptile : null } />
                         </Grid>
                         );

@@ -13,36 +13,6 @@ import { GoLocation } from 'react-icons/go';
 
 
 
-
-
-
-// const useStyles = makeStyles(  {
-//     btn: {
-//         backgroundColor: '#0D75FF',
-//         borderRadius: 50,
-//         fontColor: 'white',
-//         padding: 20,
-//         fontSize:13,
-//         height: 10,
-//     },
-//     root:{
-//         maxWidth:355,
-        
-       
-//     },
-//     media: {
-//         height:200
-//     },
-//     cardInfo:{
-//         justifyContent: 'space-between'
-//     },
-//     responsiveLocationIcon: {
-//         [theme.breakpoints.down('md')]: {
-//             fontSize = 15
-//         }
-//     }
-// })
-
 const useStyles = makeStyles( theme => {
     return {
         btn: {

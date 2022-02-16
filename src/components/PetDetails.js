@@ -25,95 +25,184 @@ import Modal from '@material-ui/core/Modal';
 
 
 
-const useStyles = makeStyles({
-        wrapper: {
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        },
-        root: {
-          borderRadius: 10,
-          padding: '4.5rem',
-          backgroundColor: '#f8fafd',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-         
-        },
-        cardBorder: {
+const useStyles = makeStyles( theme => {
+        return {
+          wrapper: {
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          },
+          root: {
             borderRadius: 10,
-            padding: '1.5rem',
+            padding: 15,
+            backgroundColor: '#f8fafd',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '70vw'
            
-        },
-        imgTop: {
-          width: 850,
-          height: 300,
-          borderRadius: 10,
-         
+          },
+          avatarContainer: {
+            marginBottom: 20, 
+            marginLeft: 200, 
+            marginRight: 200,
+            [theme.breakpoints.down('md')]: {
+              marginLeft: 150, 
+              marginRight: 150,
+            },
+            [theme.breakpoints.down('sm')]: {
+              marginLeft: 100, 
+              marginRight: 100,
+            },
+            [theme.breakpoints.down('xs')]: {
+              marginLeft: 50, 
+              marginRight: 50,
+            }
+          },
+          avatar: {
+            marginRight: 10, 
+            width: 56, 
+            height: 56, 
+            fontSize: 20,
+            [theme.breakpoints.down('md')]: {
+              width: 46, 
+              height: 46, 
+            },
+            [theme.breakpoints.down('xs')]: {
+              width: 36, 
+              height: 36, 
+            }
+          },
+          cardBorder: {
+              borderRadius: 10,
+              padding: '1.5rem',
+             
+          },
+          imgTop: {
+            width: '60vw',
+            marginBottom: 20,
+            marginTop: 20
+           
+            
+          },
+          imgCarousel: { 
+            display: 'flex',
+            width: '70vw',
+            justifyContent: 'space-evenly',
+            overflowX: 'scroll',
+           
+          },
+          imgCarouselItem: {
+            width: 158,
+            height: 97,
+            borderRadius: 5,
+            margin: 5,
+          },
+        
+          description: {
+            padding: 10,
+            marginTop: 20
           
-        },
-        imgBottom: { 
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          
-          height: 200,
-          
-        },
-        imgGrid: {
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, 210px)',
-          gridGap: 10,
-          justifyContent: 'center',
-          marginBottom: 20
-          
-        },
-        description: {
-          padding: 20,
-          marginTop: 50
-        },
-        modalStyle: {
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: 'calc(100%-200px)',
-          height: 280,
-          backgroundColor: '#fff',
-          boxShadow: 24,
-          padding: 30,
-          borderRadius: 10,
-          textAlign: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-
-          
-        },
-        btn: {
-          borderRadius: 50,
-          padding: 20,
-          fontSize:13,
-          height: 20,
-          width: 150, 
-          marginTop: 20,
-         
-        },
-        modalBtn: {
+          },
+          modalStyle: {
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 'calc(100%-200px)',
+            height: 280,
+            backgroundColor: '#fff',
+            boxShadow: 24,
+            padding: 30,
             borderRadius: 10,
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            [theme.breakpoints.down('sm')]: {
+              height: 230,
+              padding: 25,
+            },
+            [theme.breakpoints.down('xs')]: {
+              height: 200,
+              padding: 20,
+            }
+            
+          },
+          btn: {
+            borderRadius: 50,
             padding: 20,
             fontSize:13,
-            height: 10,
-            width: 150,
-            margin: 10,
+            height: 20,
+            marginTop: 20,
+            [theme.breakpoints.down('md')]: {
+              
+              padding: 17
           },
+          [theme.breakpoints.down('sm')]: {
+              fontSize: 8,
+              padding: 15,
+             
+          },
+          [theme.breakpoints.down('xs')]: {
+              fontSize: 7,
+              padding: 10,
+             
+            }
+           
+          },
+          textBtn : {
+            padding: 13,
+           [theme.breakpoints.down('sm')]: {
+               fontSize: 8,
+               padding: 10,
+               
+           },
+           [theme.breakpoints.down('xs')]: {
+               fontSize: 7,
+               padding: 8,
+               
+             }
+          },
+          responsiveLocationIcon: {
+            [theme.breakpoints.down('sm')]: {
+                width: 15,
+                height: 15
+            },
+            [theme.breakpoints.down('xs')]: {
+              width: 12,
+              height: 12
+          }
+        },
+          modalBtn: {
+              borderRadius: 10,
+              padding: 20,
+              fontSize:13,
+              height: 10,
+              width: 150,
+              margin: 10,
+              [theme.breakpoints.down('md')]: {
+               width: 130,
+                padding: 17
+            },
+            [theme.breakpoints.down('sm')]: {
+                fontSize: 8,
+                padding: 15,
+                width: 100,
+            },
+            [theme.breakpoints.down('xs')]: {
+                fontSize: 6,
+                padding: 10,
+                width: 80,
+              }
+            },
+        }
            
 })
 
-function PetDetails() {
+function PetDetails( {theme, darkMode} ) {
 const classes = useStyles()
 
 // For API consumption
@@ -157,10 +246,10 @@ const handleClose = () => {
         {pets && pets.map((pet, key) => {
           return (
             <>
-            <div style={{marginBottom: 20, marginLeft: 200, marginRight: 200}}>
+            <div className={classes.avatarContainer} >
             <Box sx={{display:'flex'}} key={key}>
               <Box sx={{display:'flex'}}>
-                <Avatar style={{marginRight: 10, width: 56, height: 56, fontSize: 20}}>{pet.name.charAt(0)}</Avatar>
+                <Avatar className={classes.avatar} >{pet.name.charAt(0)}</Avatar>
 
                 <Box  sx={{ display: 'flex', flexDirection: 'column' }}>
                     <Typography component="div" variant="h5">
@@ -180,75 +269,20 @@ const handleClose = () => {
             </div>
 
             <div >
-          <Container maxWidth='md' className={classes.root} >
+          <Container  className={classes.root} style={{backgroundColor: darkMode ?  theme.palette.background.default : '#F3F5FB'}} >
             <Typography style={{display: 'flex', alignSelf: 'flex-start'}} variant='h4'>{pet.name} Pictures</Typography>
      
-            <Card className={classes.imgTop} elevation={0} >
-                    
-                <CardMedia
-                    component="img"
-                    height="auto"
-                    width='100%'
-                    style={{position: 'relative', marginTop: -100}}
-                    image={pet.images[0]}
-                    alt='pet'
-                    
-                    
-                 /> </Card>
+              <div className={classes.imgTop}>
+                 <img src={pet.images[0]} alt='pet' style={{height: 247, width: '100%', borderRadius: 5, objectFit: 'cover'}} />
+              </div>   
             
-                 
-                <Box>
-                 <Grid container className={classes.imgBottom} spacing={3}>
-                   
-                    <Grid item style={{height: 100, width: 210}} >
-                      <Card elevation={0} style={{borderRadius: 10}} >
-                        <CardMedia
-                        component="img"
-                        height="auto"
-                        width='100%'
-                       
-                        image={pet.images[1]}
-                        alt='pet'
-                        /> </Card>
-                    </Grid>
-                    <Grid item style={{height: 100, width: 210}} >
-                      <Card elevation={0} style={{borderRadius: 10}} >
-                        <CardMedia
-                        component="img"
-                        height="auto"
-                        width='100%'
-                       
-                        image={pet.images[2]}
-                        alt='pet'
-                        /> </Card>
-                    </Grid>
-                    <Grid item style={{height: 100, width: 210}} >
-                      <Card elevation={0} style={{borderRadius: 10}} >
-                        <CardMedia
-                        component="img"
-                        height="auto"
-                        width='100%'
-                       
-                        image={pet.images[3]}
-                        alt='pet'
-                        /> </Card>
-                    </Grid>
-                    <Grid item style={{height: 100, width: 210}} >
-                      <Card elevation={0} style={{borderRadius: 10}} >
-                        <CardMedia
-                        component="img"
-                        height="auto"
-                        width='100%'
-                       
-                        image={pet.images[4]}
-                        alt='pet'
-                        /> </Card>
-                    </Grid>
-                   
-                 </Grid>
-                 </Box>
-
-                 
+              <div className={classes.imgCarousel} >
+                {pet.images.map((photo, key) => {
+                  return (
+                      <img src={photo} key={key} alt='pet' className={classes.imgCarouselItem} />
+                  )
+                })}
+              </div>  
 
                  <Card className={classes.description}>
                     <CardContent>
@@ -258,7 +292,7 @@ const handleClose = () => {
                        </Typography>
                     </CardContent>
                     <CardActions>
-                    <Button style={{backgroundColor: '  rgba(13, 117, 255, 0.05)', marginRight: 10}} color='primary' variant="text" startIcon={<GoLocation/>}>
+                    <Button className={classes.textBtn} style={{backgroundColor: '  rgba(13, 117, 255, 0.05)', marginRight: 10}} color='primary' variant="text" startIcon={<GoLocation className={classes.responsiveLocationIcon}/>}>
                         {pet.city}, {pet.state}
                     </Button>
                     </CardActions>
@@ -277,7 +311,7 @@ const handleClose = () => {
                     aria-labelledby="pet-details-modal"
                     aria-describedby="pet-details-modal-dscription"
                   >
-                    <Box className={classes.modalStyle}>
+                    <Box className={classes.modalStyle} style={{backgroundColor: darkMode ?  theme.palette.background.default : '#F3F5FB'}}>
                       <Typography variant='h4'>Are you sure you want to adopt <Box component='span' sx={{color: '#D21A30'}}>{pet.name}</Box>?</Typography>
                       
                       <Box>

@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => {
         padding: 15
       },
       [theme.breakpoints.down('xs')]: {
-        padding: 12
+        padding: 10
       }
     },
     btnIcon: {
