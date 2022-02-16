@@ -28,12 +28,12 @@ function CardSkeleton() {
                     <Skeleton variant='text'  width= {50}/>
                 </Box>
                 <Box>
-                    <Skeleton variant='circular'  width= {30} height={30}/> 
+                    <Skeleton variant='circular'  width= {30} height={30} style={{ borderRadius:'50%'}} /> 
                     
                 </Box>
            </Box>
            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-               <div> <Skeleton variant='circular' width= {70} height={20}/> </div>
+               <div> <Skeleton variant='circular' width= {100} height={40} style={{ borderRadius: 25}} /> </div>
                 <Skeleton variant='text' width={90}/>
            </Box>
      </Card>
@@ -49,12 +49,12 @@ function CardSkeleton() {
                     <Skeleton variant='text'  width= {50}/>
                 </Box>
                 <Box>
-                    <Skeleton variant='circular'  width= {30} height={30}/> 
+                    <Skeleton variant='circular'  width= {30} height={30} style={{ borderRadius:'50%'}} /> 
                     
                 </Box>
            </Box>
            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-               <div> <Skeleton variant='circular' width= {70} height={20}/> </div>
+               <div> <Skeleton variant='circular' width= {100} height={40} style={{ borderRadius:25}} /> </div>
                 <Skeleton variant='text' width={90}/>
            </Box>
      </Card>
@@ -70,12 +70,12 @@ function CardSkeleton() {
                     <Skeleton variant='text'  width= {50}/>
                 </Box>
                 <Box>
-                    <Skeleton variant='circular'  width= {30} height={30}/> 
+                    <Skeleton variant='circular'  width= {30} height={30} style={{ borderRadius:'50%'}} /> 
                     
                 </Box>
            </Box>
            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-               <div> <Skeleton variant='circular' width= {70} height={20}/> </div>
+               <div> <Skeleton variant='circular' width= {100} height={40} style={{ borderRadius: 25}} /> </div>
                 <Skeleton variant='text' width={90}/>
            </Box>
      </Card>
@@ -91,12 +91,12 @@ function CardSkeleton() {
                     <Skeleton variant='text'  width= {50}/>
                 </Box>
                 <Box>
-                    <Skeleton variant='circular'  width= {30} height={30}/> 
+                    <Skeleton variant='circular'  width= {30} height={30} style={{ borderRadius:'50%'}} /> 
                     
                 </Box>
            </Box>
            <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-               <div> <Skeleton variant='circular' width= {70} height={20}/> </div>
+               <div> <Skeleton variant='circular' width= {100} height={40} style={{ borderRadius: 25}} /> </div>
                 <Skeleton variant='text' width={90}/>
            </Box>
      </Card>
