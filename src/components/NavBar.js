@@ -7,61 +7,88 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core'
 import ThemeButton from './ThemeButton';
 import Logo from '../assets/Logo.png'
+//import {Container} from '@material-ui/core';
 //import Toolbar from '@material-ui/core/Toolbar'
 
 
 
 
-const useStyles = makeStyles({
-  root: {
+const useStyles = makeStyles( theme => {
+  return {
+    root: {
       height: 90,
-      
-      
-      
-      
-      
+   
+  },
+  logoContainer: {
+    paddingLeft: 70,
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 50
+  },
+  [theme.breakpoints.down('xs')]: {
+    paddingLeft: 30
+}
+
   },
   logo: {
-    backgroundColor: '#0D75FF',
+    
     width: 50,
     height: 50,
     borderRadius:50,
+    [theme.breakpoints.down('sm')]: {
+      width: 30,
+      height: 30,
+      marginBottom: 10
+  }
     },
+    logoImg: {
+      [theme.breakpoints.down('sm')]: {
+          width: 13,
+          height: 13,
+      }
+  },
+  logoTitle: {
+      marginTop: 12, 
+      marginLeft: 8,
+      [theme.breakpoints.down('sm')]: {
+          marginTop: -0
+      }
+  },
     
   
+  }
 });
 
 
 
-function NavBar() {
+function NavBar({toggleMode, darkMode} ) {
   const classes = useStyles()
 
   return <Box className={classes.root}>
    
  
 
-  <AppBar color="secondary" position="fixed" style={{padding: 12}} >
+  <AppBar elevation={0} color={darkMode ? 'theme.palette.background.paper' : '#fff'} style={{padding: 12 }}  position="fixed"  >
 
     
   
 
-    <Box  sx={{display: 'flex', flexDirection: 'row'}}>
-      <Box sx={{display: 'flex', flexDirection: 'row'}} style={{paddingLeft: 70}}>
-          <Box className={classes.logo} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-            <img src={Logo}/>
+    <Box  sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+      <Box sx={{display: 'flex', flexDirection: 'row'}} className={classes.logoContainer}>
+          <Box className={classes.logo} style={{ backgroundColor: darkMode ? '#D21A30' :  '#0D75FF'}} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+            <img alt='petly-logo' src={Logo} className={classes.logoImg} />
           </Box>
                       
-                   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} style={{marginTop: 12, marginLeft: 8}}>
+                   <Typography variant="h6" component="div" className={classes.logoTitle} >
                         Petly
-                      </Typography>
+                    </Typography>
                       
           </Box>
                   <Box sx={{ flexGrow: 1 }} />
-                  <ThemeButton style={{paddingRight: 10}}/>
+                  <ThemeButton  toggleMode={toggleMode} style={{paddingRight: 10}} />
                 </Box> 
           
             
-           
+              
         </AppBar>
 </Box>
 };
