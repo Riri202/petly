@@ -242,6 +242,15 @@ const [open, setOpen] = useState(false);
 const handleClose = () => {
   setOpen(false);  
     }
+
+const images = {
+ dog: Dog,
+ cat: Cat,
+ bird: Bird,
+ rabbit: Rabbit,
+ reptile: Reptile
+  
+}    
   return (
     <>
     {loading ?<> <PetDetailsSkeleton theme={theme} darkMode={darkMode} /> </>: 
@@ -267,7 +276,7 @@ const handleClose = () => {
               </Box>
                  <Box sx={{flexGrow:1}}/>
                  <Box>
-                    <img alt='pet-avatar' src={pet.animal ==='dog' ? Dog : pet.animal ==='cat' ? Cat : pet.animal ==='bird' ? Bird : pet.animal ==='rabbit' ? Rabbit : pet.animal ==='reptile' ? Reptile : null}/>
+                    <img alt='pet-avatar' src={images[pet.animal] || Dog}/>
                  </Box>
             </Box>
             </div>

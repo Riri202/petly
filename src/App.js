@@ -18,12 +18,11 @@ function App() {
 
  const [darkMode, setdarkMode] = useState(false);
 
-const onToggleDark = () => {
-  setdarkMode(true)
-};
-const onToggleLight = () => {
-  setdarkMode(false)
+ const onToggleMode = () => {
+  setdarkMode((darkMode) => !darkMode) 
 }
+
+
   
 const defaultTheme = createTheme();
   const theme = createTheme ({
@@ -112,7 +111,7 @@ const defaultTheme = createTheme();
     <ThemeProvider theme={theme}>
       <Paper style={{width:'100%', height:'auto', padding: 0, margin:0, overflowX: 'hidden'}}>
     <Router className="App">
-    <NavBar darkMode={darkMode} toggleLight={onToggleLight}  toggleDark={onToggleDark}/>
+    <NavBar darkMode={darkMode} toggleMode={onToggleMode}/>
     
 
     <Routes>

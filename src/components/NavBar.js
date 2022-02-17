@@ -60,7 +60,7 @@ const useStyles = makeStyles( theme => {
 
 
 
-function NavBar({toggleLight, darkMode, toggleDark} ) {
+function NavBar({toggleMode, darkMode} ) {
   const classes = useStyles()
 
   return <Box className={classes.root}>
@@ -84,7 +84,7 @@ function NavBar({toggleLight, darkMode, toggleDark} ) {
                       
           </Box>
                   <Box sx={{ flexGrow: 1 }} />
-                  <ThemeButton  toggleLight={toggleLight}  toggleDark={toggleDark} style={{paddingRight: 10}} />
+                  <ThemeButton  toggleMode={toggleMode} style={{paddingRight: 10}} />
                 </Box> 
           
             

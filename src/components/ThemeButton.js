@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => {
 })
 
 
-function ThemeButton({toggleLight, toggleDark }) {
+function ThemeButton({toggleMode }) {
   const classes = useStyles();
   return <div>
  
@@ -52,11 +52,11 @@ function ThemeButton({toggleLight, toggleDark }) {
    
 
        
-        <Button onClick={toggleLight} className={classes.btn} >  
+        <Button onClick={toggleMode} className={classes.btn} >  
 
             <FiSun className={classes.btnIcon}/>
          </Button>
-        <Button onClick={toggleDark}   className={classes.btn}>
+        <Button onClick={toggleMode}   className={classes.btn}>
             <IoIosMoon className={classes.btnIcon}/>
         </Button>
      
