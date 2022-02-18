@@ -109,7 +109,8 @@ const useStyles = makeStyles( theme => {
         
           description: {
             padding: 10,
-            marginTop: 20
+            marginTop: 20,
+            width: '70vw',
           
           },
           modalStyle: {
