@@ -21,6 +21,7 @@ import { GoLocation } from 'react-icons/go';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Modal from '@material-ui/core/Modal';
+import { getLinkForProxy } from '../utils/proxy';
 
 
 
@@ -277,14 +278,14 @@ const images = {
             <Typography style={{display: 'flex', alignSelf: 'flex-start'}} variant='h4'>{pet.name} Pictures</Typography>
      
               <div className={classes.imgTop}>
-                 <img src={pet.images[0]} alt='pet' style={{height: 247, width: '100%', borderRadius: 5, objectFit: 'cover'}} />
+                 <img src={getLinkForproxy(pet.images[0])} alt='pet' style={{height: 247, width: '100%', borderRadius: 5, objectFit: 'cover'}} />
               </div>   
             
               <div  className={classes.imgCarousel} >
                 {pet.images.map((photo, key) => {
                   return (
                     
-                      <img src={photo} key={key} alt='pet' style={{display: 'flex', alignSelf: 'flex-start'}} className={classes.imgCarouselItem} />
+                      <img src={getLinkForproxy(photo)} key={key} alt='pet' style={{display: 'flex', alignSelf: 'flex-start'}} className={classes.imgCarouselItem} />
                      
                   )
 

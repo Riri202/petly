@@ -64,7 +64,7 @@ const classes = useStyles()
                 <CardMedia
                     component="img"
                     height="194"
-                    image={src}
+                    image={`https://petly-proxy.iamstarcode.com/${src}`}
                     alt={breed}
                     className={classes.media}
                  />
