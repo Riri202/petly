@@ -21,6 +21,7 @@ import { GoLocation } from 'react-icons/go';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Modal from '@material-ui/core/Modal';
+import { getLinkForProxy } from '../utils/proxy';
 
 
 
@@ -42,7 +43,7 @@ const useStyles = makeStyles( theme => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            width: '80vw'
+            width: '75vw'
            
           },
           avatarContainer: {
@@ -90,9 +91,10 @@ const useStyles = makeStyles( theme => {
           },
           imgCarousel: { 
             display: 'flex',
-            width: '75vw',
-            justifyContent: 'space-evenly',
+            width: '70vw',
+            justifyContent: 'flex-start',
             overflowX: 'scroll',
+            marginLeft: 20
             
            
           },
@@ -277,14 +279,14 @@ const images = {
             <Typography style={{display: 'flex', alignSelf: 'flex-start'}} variant='h4'>{pet.name} Pictures</Typography>
      
               <div className={classes.imgTop}>
-                 <img src={pet.images[0]} alt='pet' style={{height: 247, width: '100%', borderRadius: 5, objectFit: 'cover'}} />
+                 <img src={getLinkForProxy(pet.images[0])} alt='pet' style={{height: 247, width: '100%', borderRadius: 5, objectFit: 'cover'}} />
               </div>   
             
               <div  className={classes.imgCarousel} >
                 {pet.images.map((photo, key) => {
                   return (
                     
-                      <img src={photo} key={key} alt='pet' style={{display: 'flex', alignSelf: 'flex-start'}} className={classes.imgCarouselItem} />
+                      <img src={getLinkForProxy(photo)} key={key} alt='pet' style={{display: 'flex', alignSelf: 'flex-start'}} className={classes.imgCarouselItem} />
                      
                   )
 

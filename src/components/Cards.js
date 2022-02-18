@@ -13,6 +13,7 @@ import Cat from '../assets/Cat.png'
 import Bird from '../assets/Bird.png'
 import Rabbit from '../assets/Rabbit.png'
 import Reptile from '../assets/Reptile.png'
+import { getLinkForProxy } from '../utils/proxy';
 
 //import { makeStyles } from '@material-ui/core'
 
@@ -54,7 +55,7 @@ const fetchPets = async () => {
                         return ( 
                             <Grid item xs={12} sm={6} md={4} key={key}>
                                <CardItem 
-                            src={images[0]}
+                            src={getLinkForProxy(images[0])}
                             text={name}
                             breed={ breed}
                             city={ city}
