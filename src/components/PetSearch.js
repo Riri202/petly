@@ -14,6 +14,7 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid'
 import CardItem from './CardItem';
 import CardSkeleton from './CardSkeleton';
+import { getLinkForProxy } from '../utils/proxy';
 
 
 const useStyles = makeStyles( theme => {
@@ -162,7 +163,7 @@ const handleReptile = () =>{
                         
                         <Grid item xs={12} sm={6} md={4} key={key}>
                            <CardItem 
-                        src={images[0]}
+                        src={getLinkForProxy(images[0])}
                         text={name}
                         breed={breed}
                         city={city}
