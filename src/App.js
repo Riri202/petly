@@ -56,47 +56,29 @@ const defaultTheme = createTheme();
       },
       h4: {
         [defaultTheme.breakpoints.down('sm')]: {
-          fontSize: 25
+          fontSize: 22
         },
-        // [defaultTheme.breakpoints.down('xs')]: {
-        //   fontSize: 20
-        // },
+        
         
       },
        h5: {
          [defaultTheme.breakpoints.down('md')]: {
-           fontSize: 15
+           fontSize: 20
          },
-        //  [defaultTheme.breakpoints.down('xs')]: {
-        //   fontSize: 12
-        // },
+        
          
         },
-        h6: {
-          [defaultTheme.breakpoints.down('xs')]: {
-            fontSize: 15
-          },
-        },
-         
+        
        'subtitle1': {
         [defaultTheme.breakpoints.down('md')]: {
-          fontSize: 12
+          fontSize: 15
         },
-        // [defaultTheme.breakpoints.down('xs')]: {
-        //   fontSize: 10
-        // },
-        
+         
       },
        'body1': {
-        [defaultTheme.breakpoints.down('md')]: {
-          fontSize: 13
-        },
         [defaultTheme.breakpoints.down('sm')]: {
-          fontSize: 12
-        },
-        // [defaultTheme.breakpoints.down('xs')]: {
-        //   fontSize: 11
-        // },
+          fontSize: 15
+        },        
         
       },
       

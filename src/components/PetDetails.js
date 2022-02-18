@@ -36,13 +36,13 @@ const useStyles = makeStyles( theme => {
           },
           root: {
             borderRadius: 10,
-            padding: 30,
+            padding: 20,
             backgroundColor: '#f8fafd',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            width: '70vw'
+            width: '80vw'
            
           },
           avatarContainer: {
@@ -72,8 +72,8 @@ const useStyles = makeStyles( theme => {
               height: 46, 
             },
             [theme.breakpoints.down('xs')]: {
-              width: 36, 
-              height: 36, 
+              width: 40, 
+              height: 40, 
             }
           },
           cardBorder: {
@@ -82,7 +82,7 @@ const useStyles = makeStyles( theme => {
              
           },
           imgTop: {
-            width: '65vw',
+            width: '70vw',
             marginBottom: 20,
             marginTop: 20
            
@@ -90,7 +90,7 @@ const useStyles = makeStyles( theme => {
           },
           imgCarousel: { 
             display: 'flex',
-            width: '70vw',
+            width: '75vw',
             justifyContent: 'space-evenly',
             overflowX: 'scroll',
             
@@ -127,13 +127,11 @@ const useStyles = makeStyles( theme => {
             justifyContent: 'center',
             alignItems: 'center',
             [theme.breakpoints.down('sm')]: {
-              height: 230,
-              padding: 25,
-            },
-            [theme.breakpoints.down('xs')]: {
               height: 200,
-              padding: 20,
-            }
+              padding: 25,
+              
+            },
+           
             
           },
           btn: {
@@ -147,29 +145,21 @@ const useStyles = makeStyles( theme => {
               padding: 17
           },
           [theme.breakpoints.down('sm')]: {
-              fontSize: 8,
+              fontSize: 10,
               padding: 15,
              
           },
-          // [theme.breakpoints.down('xs')]: {
-          //     fontSize: 7,
-          //     padding: 10,
-             
-          //   }
+          
            
           },
           textBtn : {
             padding: 13,
            [theme.breakpoints.down('sm')]: {
-               fontSize: 8,
+               fontSize: 10,
                padding: 10,
                
            },
-          //  [theme.breakpoints.down('xs')]: {
-          //      fontSize: 7,
-          //      padding: 8,
-               
-          //    }
+          
           },
           responsiveLocationIcon: {
             [theme.breakpoints.down('sm')]: {

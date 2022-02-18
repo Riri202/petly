@@ -45,7 +45,7 @@ const fetchPets = async () => {
         }, [])
 
         return (
-        <div style={{paddingLeft: 55, paddingRight: 55}}>
+        <div style={{paddingLeft: 15, paddingRight: 15}}>
        {loading ? <> <Typography variant='h4' style={{marginTop: 70, marginBottom: 30 }}>Search results</Typography> <CardSkeleton />
         </>  : <div>
            <Typography variant='h4' style={{ marginTop: 70, marginBottom: 30 }}>Search results</Typography>
