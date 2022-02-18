@@ -26,6 +26,7 @@ import Modal from '@material-ui/core/Modal';
 
 
 
+
 const useStyles = makeStyles( theme => {
         return {
           wrapper: {
@@ -150,11 +151,11 @@ const useStyles = makeStyles( theme => {
               padding: 15,
              
           },
-          [theme.breakpoints.down('xs')]: {
-              fontSize: 7,
-              padding: 10,
+          // [theme.breakpoints.down('xs')]: {
+          //     fontSize: 7,
+          //     padding: 10,
              
-            }
+          //   }
            
           },
           textBtn : {
@@ -164,11 +165,11 @@ const useStyles = makeStyles( theme => {
                padding: 10,
                
            },
-           [theme.breakpoints.down('xs')]: {
-               fontSize: 7,
-               padding: 8,
+          //  [theme.breakpoints.down('xs')]: {
+          //      fontSize: 7,
+          //      padding: 8,
                
-             }
+          //    }
           },
           responsiveLocationIcon: {
             [theme.breakpoints.down('sm')]: {
@@ -196,11 +197,11 @@ const useStyles = makeStyles( theme => {
                 padding: 15,
                 width: 100,
             },
-            [theme.breakpoints.down('xs')]: {
-                fontSize: 6,
-                padding: 10,
-                width: 80,
-              }
+            // [theme.breakpoints.down('xs')]: {
+            //     fontSize: 6,
+            //     padding: 10,
+            //     width: 80,
+            //   }
             },
         }
            

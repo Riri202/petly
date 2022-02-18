@@ -26,11 +26,11 @@ const useStyles = makeStyles(theme =>{
         width: 150,
         padding: 5,
         
-        [theme.breakpoints.down('xs')]: {
-            padding: 10,
-            fontSize: 6,
-            height: 25,
-            width: 80,
+        [theme.breakpoints.down('sm')]: {
+            padding: 12,
+            fontSize: 11,
+            height: 30,
+            width: 120,
             marginBottom: 15
            
         }

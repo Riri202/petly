@@ -58,18 +58,18 @@ const defaultTheme = createTheme();
         [defaultTheme.breakpoints.down('sm')]: {
           fontSize: 25
         },
-        [defaultTheme.breakpoints.down('xs')]: {
-          fontSize: 20
-        },
+        // [defaultTheme.breakpoints.down('xs')]: {
+        //   fontSize: 20
+        // },
         
       },
        h5: {
          [defaultTheme.breakpoints.down('md')]: {
            fontSize: 15
          },
-         [defaultTheme.breakpoints.down('xs')]: {
-          fontSize: 12
-        },
+        //  [defaultTheme.breakpoints.down('xs')]: {
+        //   fontSize: 12
+        // },
          
         },
         h6: {
@@ -82,9 +82,9 @@ const defaultTheme = createTheme();
         [defaultTheme.breakpoints.down('md')]: {
           fontSize: 12
         },
-        [defaultTheme.breakpoints.down('xs')]: {
-          fontSize: 10
-        },
+        // [defaultTheme.breakpoints.down('xs')]: {
+        //   fontSize: 10
+        // },
         
       },
        'body1': {
@@ -94,9 +94,9 @@ const defaultTheme = createTheme();
         [defaultTheme.breakpoints.down('sm')]: {
           fontSize: 12
         },
-        [defaultTheme.breakpoints.down('xs')]: {
-          fontSize: 11
-        },
+        // [defaultTheme.breakpoints.down('xs')]: {
+        //   fontSize: 11
+        // },
         
       },
       
