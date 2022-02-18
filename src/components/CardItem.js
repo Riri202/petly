@@ -23,14 +23,14 @@ const useStyles = makeStyles( theme => {
                     fontSize:13,
                     height: 10,
                     marginLeft: -5,
-                    [theme.breakpoints.down('md')]: {
+                    [theme.breakpoints.down('sm')]: {
                         fontSize: 11,
                         padding: 17
                     },
-                    [theme.breakpoints.down('sm')]: {
-                        fontSize: 8,
-                        padding: 13,
-                    },
+                    // [theme.breakpoints.down('sm')]: {
+                    //     fontSize: 8,
+                    //     padding: 13,
+                    // },
                     // [theme.breakpoints.down('xs')]: {
                     //     fontSize: 6,
                     //     padding: 10, }

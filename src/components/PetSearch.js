@@ -47,8 +47,8 @@ const useStyles = makeStyles( theme => {
         },
         container: {
             paddingTop: 80,
-            paddingLeft: 55,
-            paddingRight: 55,
+            paddingLeft: 15,
+            paddingRight: 15,
             marginBottom: 60,
         },
         btnWrapper: {
