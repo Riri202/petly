@@ -31,9 +31,9 @@ const useStyles = makeStyles( theme => {
                         fontSize: 8,
                         padding: 13,
                     },
-                    [theme.breakpoints.down('xs')]: {
-                        fontSize: 6,
-                        padding: 10, }
+                    // [theme.breakpoints.down('xs')]: {
+                    //     fontSize: 6,
+                    //     padding: 10, }
                 },
                 root:{
                     //maxWidth:355,
